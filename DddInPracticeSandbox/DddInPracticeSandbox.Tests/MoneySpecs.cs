@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using DddInPracticeSandbox.Logic;
 using FluentAssertions;
 using Xunit;
@@ -114,6 +115,27 @@ namespace DddInPracticeSandbox.Tests
             };
 
             action.Should().Throw<InvalidOperationException>();
+        }
+
+        [Theory]
+        [InlineData(1, 0, 0, 0, 0, 0, "$1")] // 1 cent
+        [InlineData(1, 2, 0, 0, 0, 0, "$21")] // 21 cents
+        [InlineData(1, 2, 4, 0, 0, 0, "$1.21")]
+        [InlineData(1, 2, 4, 1, 0, 0, "$2.21")]
+        [InlineData(1, 2, 4, 1, 2, 0, "$12.21")]
+        [InlineData(1, 2, 4, 1, 2, 3, "$72.21")]
+        public void To_string_should_return_amount_of_money(
+            int oneCentCount,
+            int tenCentCount,
+            int quarterCount,
+            int oneDollarCount,
+            int fiveDollarCount,
+            int twentyDollarCount,
+            string expectedString)
+        {
+            var money = new Money(oneCentCount, tenCentCount, quarterCount, oneDollarCount, fiveDollarCount, twentyDollarCount);
+
+            money.ToString().Should().Be(expectedString);
         }
     }
 }

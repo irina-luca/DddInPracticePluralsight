@@ -1,0 +1,1 @@
+C:\Users\IAGL\Documents\Private\Tuts\DDD\Pluralsight_DDD-In-Practice\Code\DddInPracticePluralsight\DddInPracticeSandbox\DddInPracticeSandbox.UI\obj\Debug\DddInPracticeSandbox.UI.csprojAssemblyReference.cache

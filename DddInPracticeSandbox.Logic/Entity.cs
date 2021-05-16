@@ -47,7 +47,7 @@ namespace DddInPracticeSandbox.Logic
             return (GetRealType().ToString() + Id).GetHashCode();
         }
 
-        private Type GetRealType()
+        private Type GetRealType() // This is needed because this would be the actual type of the entity regardless of whether it would have a proxy class on top of it created by Nhibernate.
         {
             return NHibernateProxyHelper.GetClassWithoutInitializingProxy(this);
         }

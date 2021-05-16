@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DddInPracticeSandbox.Logic", "..\DddInPracticeSandbox.Logic\DddInPracticeSandbox.Logic.csproj", "{25FFCE77-4FCA-44CB-9870-477A311D51D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DddInPracticeSandbox.Tests", "DddInPracticeSandbox.Tests\DddInPracticeSandbox.Tests.csproj", "{65206131-1E9C-43C9-93F1-D634C60E1602}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DddInPracticeSandbox.Tests", "DddInPracticeSandbox.Tests\DddInPracticeSandbox.Tests.csproj", "{65206131-1E9C-43C9-93F1-D634C60E1602}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
